@@ -35,7 +35,7 @@ const MyRentagle = () => {
    })
 
    return (
-      <div className={'figure_item'}>
+      <div className='figure_item'>
          <LinkToMain />
          <div className='figure_title'>Калькулятор прямоугольника</div>
          <div className='figure_title'>

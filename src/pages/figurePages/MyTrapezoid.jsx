@@ -45,7 +45,7 @@ const MyTrapezoid = () => {
  
 
    return (
-      <div className={'figure_item'}>
+      <div className='figure_item'>
          <LinkToMain />
          <div className='figure_title'>Калькулятор трапеции</div>
          <div className='figure_title'>

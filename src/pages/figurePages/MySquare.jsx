@@ -36,7 +36,7 @@ const MySquare = () => {
    })
 
    return (
-      <div className={'figure_item'}>
+      <div className='figure_item'>
          <LinkToMain />
          <div className='figure_title'>Калькулятор квадрата</div>
          <div className='figure_title'>
