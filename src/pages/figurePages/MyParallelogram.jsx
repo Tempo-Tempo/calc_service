@@ -35,21 +35,21 @@ const MyParallelogram = () => {
    })
 
    return (
-      <div className={'absolute flex flex-col bg-black border-2 p-2 text-base border-sky-500 rounded-md w-96 h-100'}>
+      <div className='figure_item'>
          <LinkToMain />
-         <div className='border-b-2'>Калькулятор параллелограмма</div>
-         <div className='mt-1 mb-2 border-b-2 relative flex flex-col justify-center items-center'>
+         <div className='figure_title'>Калькулятор параллелограмма</div>
+         <div className='figure_title'>
                Параллелограмм — это четырехугольник, у которого противоположные стороны попарно параллельны и равны.
          </div>
             <label> Что будем рассчитывать? </label>
-         <select value={typeFigure} onChange={(e) => handlerPutOption(e.target.value)} className='text-black cursor-pointer mt-2 w-100'>
+         <select value={typeFigure} onChange={(e) => handlerPutOption(e.target.value)} className={"select_Figure"}>
             <option  value="parallelogram/square">Площадь параллелограмма</option>
             <option value="parallelogram/per">Периметр параллелограмма</option>
             <option value="parallelogram/height">Высоту параллелограмма</option>
          </select>
-         <ul className='text-left p-2'>
-            {typeFigure === "parallelogram/square" && <li className='flex flex-col'>
-               <div className='flex mb-3 mt-2'>
+         <ul className='ul_Figure'>
+            {typeFigure === "parallelogram/square" && <li className='li_Figure'>
+               <div className='li_Inner'>
                {<MyImage src={require('../../assets/imgFigure/myParallelogramImg2.png')} alt='ooops' />} 
                  <span className='ml-4'> Формула: S = AD * BM, где AD — это основание параллелограмма, BM — это высота параллелограмма </span>
                </div>
@@ -57,8 +57,8 @@ const MyParallelogram = () => {
                <MyInput value={newCalc.b}  onChange={(e) => setNewCalc({...newCalc, b: e})} placeholder='Введите значение BM' validison={ErrorMessage(newCalc.b, startValid)}/>
                   Результат: <span className='text-green-500'>{result}</span>  
             </li>}
-            {typeFigure === "parallelogram/per" && <li className='flex flex-col'>
-               <div className='flex mb-3 mt-2'>
+            {typeFigure === "parallelogram/per" && <li className='li_Figure'>
+               <div className='li_Inner'>
                  {<MyImage src={require('../../assets/imgFigure/myParallelogramImg2.png')} alt='ooops' />} 
                  <span className='ml-4'> Формула: P = 2 * (AB + AD), где AB — это "короткая", AD — это "длинная" сторона параллелограмма </span>
                </div>
@@ -66,8 +66,8 @@ const MyParallelogram = () => {
                <MyInput value={newCalc.b}  onChange={(e) => setNewCalc({...newCalc, b: e})} placeholder='Введите значение AM' validison={ErrorMessage(newCalc.b, startValid)}/>
                Результат: <span className='text-green-500'>{result}</span> 
             </li>}
-            {typeFigure === "parallelogram/height" && <li className='flex flex-col'>
-               <div className='flex mb-3 mt-2'>
+            {typeFigure === "parallelogram/height" && <li className='li_Figure'>
+               <div className='li_Inner'>
                  {<MyImage src={require('../../assets/imgFigure/myParallelogramImg2.png')} alt='ooops' />} 
                  <span className='ml-4'> Формула: H = S / AD, где S — это площадь, AD — это основание </span>
                </div>

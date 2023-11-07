@@ -35,20 +35,20 @@ const MyRentagle = () => {
    })
 
    return (
-      <div className={'absolute flex flex-col bg-black border-2 p-2 text-base border-sky-500 rounded-md w-96 h-100'}>
+      <div className={'figure_item'}>
          <LinkToMain />
-         <div className='border-b-2'>Калькулятор прямоугольника</div>
-         <div className='mt-1 mb-2 border-b-2 relative flex flex-col justify-center items-center'>
+         <div className='figure_title'>Калькулятор прямоугольника</div>
+         <div className='figure_title'>
                Прямоугольником называется параллелограмм, у которого все углы прямые.
          </div> 
             <label> Что будем рассчитывать? </label>
-         <select value={typeFigure} onChange={(e) => handlerPutOption(e.target.value)} className='text-black cursor-pointer mt-2 w-100'>
+         <select value={typeFigure} onChange={(e) => handlerPutOption(e.target.value)} className={"select_Figure"}>
             <option value="rectangle/square">Площадь прямоугольника</option>
             <option value="rectangle/per">Периметр прямоугольника</option>
          </select>
-            <ul className='text-left p-2'>
-            {typeFigure === "rectangle/square" && <li className='flex flex-col'>
-                <div className='flex mb-3 mt-2'>
+            <ul className='ul_Figure'>
+            {typeFigure === "rectangle/square" && <li className='li_Figure'>
+                <div className='li_Inner'>
                   {<MyImage src={require('../../assets/imgFigure/myRentagleImg.png')} alt='ooops' />}
                   <span className='ml-4'> Формула: S =  a * b, где а — это ширина, b — это длина </span>
                 </div>
@@ -56,8 +56,8 @@ const MyRentagle = () => {
                <MyInput value={newCalc.b}  onChange={(e) => setNewCalc({...newCalc, b: e})} placeholder='Введите значение b' validison={ErrorMessage(newCalc.b, startValid)}/>
                   Результат: <span className='text-green-500'>{result}</span>  
             </li>}
-            {typeFigure === "rectangle/per" && <li className='flex flex-col'>
-                <div className='flex mb-3 mt-2'>
+            {typeFigure === "rectangle/per" && <li className='li_Figure'>
+                <div className='li_Inner'>
                   {<MyImage src={require('../../assets/imgFigure/myRentagleImg.png')} alt='ooops' />}
                   <span className='ml-4'> Формула: P = 2 * (a + b), где а — это длина, b — это ширина </span>
                 </div>

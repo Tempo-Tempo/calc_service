@@ -45,20 +45,20 @@ const MyTrapezoid = () => {
  
 
    return (
-      <div className={'absolute flex flex-col bg-black border-2 p-2 text-base border-sky-500 rounded-md w-96 h-100'}>
+      <div className={'figure_item'}>
          <LinkToMain />
-         <div className='border-b-2'>Калькулятор трапеции</div>
-         <div className='mt-1 mb-2 relative border-b-2 flex flex-col justify-center items-center'>
+         <div className='figure_title'>Калькулятор трапеции</div>
+         <div className='figure_title'>
               Трапеция — это четырёхугольник с двумя параллельными и двумя непараллельными сторонами.
          </div>
             <label> Что будем рассчитывать? </label>
-         <select value={typeFigure} onChange={(e) => handlerPutOption(e.target.value)} className='text-black cursor-pointer mt-2 w-100'>
+         <select value={typeFigure} onChange={(e) => handlerPutOption(e.target.value)} className={"select_Figure"}>
             <option  value="trapezoid/square">Площадь трапеции</option>
             <option value="trapezoid/per">Периметр трапеции</option>
          </select>
-         <ul className='text-left p-2'>
-            {typeFigure === "trapezoid/square" && <li className='flex flex-col'>
-                <div className='flex mb-3 mt-2'>
+         <ul className='ul_Figure'>
+            {typeFigure === "trapezoid/square" && <li className='li_Figure'>
+                <div className='li_Inner'>
                 {<MyImage src={require('../../assets/imgFigure/myTrapezoidImg3.png')} alt='ooops' />}
                   <span className='ml-4'> Формула: S = (a + b) * h / 2, где a и b - длины оснований трапеции, а h - высота трапеции, опущенная на основание. </span>
                </div>
@@ -67,8 +67,8 @@ const MyTrapezoid = () => {
                <MyInput value={newCalc.c}  onChange={(e) => setNewCalc({...newCalc, c: e})} placeholder='Введите значение h' validison={ErrorMessage(newCalc.c, startValid)}/>
                   Результат: <span className='text-green-500'>{result}</span>  
             </li>}
-            {typeFigure === "trapezoid/per" && <li className='flex flex-col'>
-            <div className='flex mb-3 mt-2'>
+            {typeFigure === "trapezoid/per" && <li className='li_Figure'>
+            <div className='li_Inner'>
                 {<MyImage src={require('../../assets/imgFigure/myTrapezoidImg2.png')} alt='ooops' />}
                   <span className='ml-4'>  Формула: P = a + b + c + d, где a, b, c, d — это сороны. </span>
                </div>

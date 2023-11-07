@@ -57,14 +57,14 @@ const MyTriangle = () => {
    })
 
    return (
-      <div className={'absolute flex flex-col bg-black p-2 border-2 text-base border-sky-500 rounded-md w-96 h-100'}>
+      <div className='figure_item'>
          <LinkToMain />
-         <div className='border-b-2'>Калькулятор треугольникa</div>
-         <div className='mt-1 mb-2 border-b-2 relative flex flex-col justify-center items-center'>
+         <div className='figure_title'>Калькулятор треугольникa</div>
+         <div className='figure_title'>
          Треугольник — это геометрическая фигура, состоящая из трех отрезков
          </div>
          <label> Что будем рассчитывать? </label>
-          <select value={typeFigure} onChange={(e) => handlerPutOption(e.target.value)} className='text-black cursor-pointer mt-2 w-100'> 
+          <select value={typeFigure} onChange={(e) => handlerPutOption(e.target.value)} className={"select_Figure"}> 
             <option value="triangle/square">Площадь треугольника</option>
             <option value="triangle/per">Периметр треугольника</option>
             <option value="triangle/med">Медиана треугольника</option>
@@ -73,9 +73,9 @@ const MyTriangle = () => {
             <option value="triangle/rad">Площадь вписанной в треугольник окружности</option>
             <option value="triangle/opi">Площадь описанной в треугольник окружности</option>
          </select>
-         <ul className='text-left p-2'>
-         {typeFigure === "triangle/square" && <li className='flex flex-col'>
-                <div className='flex mb-3 mt-2'>
+         <ul className='ul_Figure'>
+         {typeFigure === "triangle/square" && <li className='li_Figure'>
+                <div className='li_Inner'>
                   {<MyImage src={require(`../../assets/imgFigure/myTriangleImg.png`)} alt='ooops' />}
                   <span className='ml-4'> Формула: S = 0.5 * a * h, где a — основание,  h — высота.  </span>
                 </div> 
@@ -93,8 +93,8 @@ const MyTriangle = () => {
                validison={ErrorMessage(newCalc.b, startValid)}/>
                Результат: <span className='text-green-500'>{errorTriangle ? errorTriangle.resultText : result}</span> 
             </li>}
-            {typeFigure === "triangle/per" && <li className='flex flex-col'>
-                <div className='flex mb-3 mt-2'>
+            {typeFigure === "triangle/per" && <li className='li_Figure'>
+                <div className='li_Inner'>
                   {<MyImage src={require(`../../assets/imgFigure/myTriangleImg2.png`)} alt='ooops' />}
                   <span className='ml-4'> Формула: P = a + b + c, где a, b, c - стороны треугольника </span>
                 </div> 
@@ -116,8 +116,8 @@ const MyTriangle = () => {
                 validison={ErrorMessage(newCalc.c, startValid)}/>
                Результат: <span className='text-green-500'>{errorTriangle ? errorTriangle.resultText : result}</span> 
             </li>}
-            {typeFigure === "triangle/med" &&  <li className='flex flex-col'>
-                <div className='flex mb-3 mt-2'>
+            {typeFigure === "triangle/med" &&  <li className='li_Figure'>
+                <div className='li_Inner'>
                   {<MyImage src={require(`../../assets/imgFigure/myTriangleImgMed.png`)} alt='ooops' />}
                   <span className='ml-4'> Формула: AM = √(2 * AB² + 2 * AC² - BC²) * 0.5, где AB, AC, BC - стороны треугольника; AM - медиана </span>
                 </div> 
@@ -138,8 +138,8 @@ const MyTriangle = () => {
                validison={ErrorMessage(newCalc.c, startValid)}/>
                  Результат: <span className='text-green-500'>{errorTriangle ? errorTriangle.resultText : result}</span>  
             </li>}
-            {typeFigure === "triangle/bess" &&  <li className='flex flex-col'>
-                <div className='flex mb-3 mt-2'>
+            {typeFigure === "triangle/bess" &&  <li className='li_Figure'>
+                <div className='li_Inner'>
                   {<MyImage src={require(`../../assets/imgFigure/myTriangleImgBiss.png`)} alt='ooops' />}
                   <span className='ml-4'> Формула: L =  √ab (a + b + c) * (a + b - c) / (a + b)</span>
                 </div> 
@@ -160,7 +160,7 @@ const MyTriangle = () => {
                validison={ErrorMessage(newCalc.c, startValid)}/>
                  Результат: <span className='text-green-500'>{errorTriangle ? errorTriangle.resultText : result}</span>  
             </li>}
-            {typeFigure === "triangle/type" &&  <li className='flex flex-col'>
+            {typeFigure === "triangle/type" &&  <li className='li_Figure'>
                Введите 3 известных значения угла, чтобы определить тип треугольника
                <MyInput 
                value={newCalc.a} 
@@ -179,10 +179,10 @@ const MyTriangle = () => {
                validison={ErrorMessage(newCalc.c, startValid)}/>                 
                Результат: <span className='text-green-500'>{HandlerTypeTriangle(resultTypeTriangle)}</span>  
             </li>}
-            {typeFigure === "triangle/rad" &&  <li className='flex flex-col'>
-               <div className='flex mb-3 mt-2'>
+            {typeFigure === "triangle/rad" &&  <li className='li_Figure'>
+               <div className='li_Inner'>
                  {<MyImage src={require(`../../assets/imgFigure/myTriangleImg6.png`)} alt='ooops' />}
-                 <span className='ml-4'> Формула: π * r², где r = √(((p - a) * (p - b) * (p - c)) / p), где p - полупериметр </span>
+                 <span className='ml-4'> Формула: π * r², где r = √(((p - a) * (p - b) * (p - c)) / p), p - полупериметр </span>
                 </div> 
                 <MyInput 
                 value={newCalc.a}  
@@ -201,10 +201,10 @@ const MyTriangle = () => {
                validison={ErrorMessage(newCalc.c, startValid)}/>     
                  Результат: <span className='text-green-500'>{errorTriangle ? errorTriangle.resultText : result}</span>  
             </li>}
-            {typeFigure === "triangle/opi" &&  <li className='flex flex-col'>
-               <div className='flex mb-3 mt-2'>
-                 {<MyImage src={require(`../../assets/imgFigure/myTriangleImg6.png`)} alt='ooops' />}
-                 <span className='ml-4'> Формула: π * r², где r = (a * b * c) / (4 * S), где a, b, c - стороны треугольника, а S - площадь треугольника  </span>
+            {typeFigure === "triangle/opi" &&  <li className='li_Figure'>
+               <div className='li_Inner'>
+                 {<MyImage src={require(`../../assets/imgFigure/MyTriangleImgVpis.png`)} alt='ooops' />}
+                 <span className='ml-4'> Формула: π * r², где r = (a * b * c) / (4 * S), a, b, c - стороны треугольника, S - площадь треугольника  </span>
                 </div> 
                 <MyInput 
                 value={newCalc.a}  
@@ -219,7 +219,7 @@ const MyTriangle = () => {
                <MyInput 
                value={newCalc.c}  
                onChange={(e) => setNewCalc({...newCalc, c: e})}
-               placeholder='Введите гипотенузу c'
+               placeholder='Введите гипотенузу d'
                validison={ErrorMessage(newCalc.c, startValid)}/>
                  Результат: <span className='text-green-500'>{errorTriangle ? errorTriangle.resultText : result}</span>  
             </li>}

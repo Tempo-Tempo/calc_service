@@ -36,21 +36,21 @@ const MyRhombus = () => {
    })
 
    return (
-      <div className={'absolute flex flex-col bg-black border-2 p-2 text-base border-sky-500 rounded-md w-96 h-100'}>
+      <div className={'figure_item'}>
       <LinkToMain />
-      <div className='border-b-2'>Калькулятор ромбаa</div>
-      <div className='mt-1 mb-2 border-b-2 relative flex flex-col justify-center items-center'>
+      <div className='figure_title'>Калькулятор ромбаa</div>
+      <div className='figure_title'>
       Ромбом называется параллелограмм, у которого все стороны равны.
       </div>
          <label> Что будем рассчитывать? </label>
-      <select value={typeFigure} onChange={(e) => handlerPutOption(e.target.value)} className='text-black cursor-pointer m-2 w-100'> 
+      <select value={typeFigure} onChange={(e) => handlerPutOption(e.target.value)} className={"select_Figure"}> 
          <option value={"rhombus/square"}>Площадь ромбa</option>
          <option value={"rhombus/per"}>Периметр ромбa</option>
          
       </select>
-      <ul className='text-left p-2'>
-         {typeFigure === "rhombus/square" && <li className='flex flex-col'>
-            <div className='flex mb-3 mt-2'>
+      <ul className='ul_Figure'>
+         {typeFigure === "rhombus/square" && <li className='li_Figure'>
+            <div className='li_Inner'>
                {<MyImage src={require('../../assets/imgFigure/myRhombusImg.png')} alt='ooops' />}
                <span className='ml-4'> Формула: S = (AC · BD) / 2, где AC и BD — это диагонали ромба </span>
             </div>
@@ -58,8 +58,8 @@ const MyRhombus = () => {
              <MyInput value={newCalc.b}  onChange={(e) => setNewCalc({...newCalc, b: e})} placeholder='Введите высоту BD' validison={ErrorMessage(newCalc.b, startValid)}/>
                Результат: <span className='text-green-500'>{result}</span>  
          </li>}
-         {typeFigure === "rhombus/per" && <li className='flex flex-col'>
-         <div className='flex mb-3 mt-2'>
+         {typeFigure === "rhombus/per" && <li className='li_Figure'>
+         <div className='li_Inner'>
                {<MyImage src={require('../../assets/imgFigure/myRhombusImg2.png')} alt='ooops' />}
                <span className='ml-4'>  Формула: P = a + a + a + a, где a — это сторона </span>
             </div>

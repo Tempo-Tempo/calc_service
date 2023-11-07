@@ -1,0 +1,45 @@
+.figure_item {
+   position: absolute;
+   display: flex;
+   flex-direction: column;
+   background: #000;
+   border-width: 2px;
+   padding: 10px;
+   border-radius: 5px;
+   font-size: 18px;
+   width: 24rem;
+   max-height: 100%;
+   font-size: 1rem; 
+   line-height: 1.5rem;
+   border: 2px solid skyblue;
+}
+
+.figure_title {
+   border-bottom: 2px solid;
+   padding-bottom: 4px;
+}
+
+.select_Figure {
+   color: black;
+   border-radius: 5px;
+   cursor: pointer;
+   margin-top: 5px;
+}
+
+.ul_Figure {
+   text-align: left;
+   padding: 2;
+   margin-top: 5px;
+}
+
+.li_Figure {
+   display: flex;
+   flex-direction: column;
+}
+
+.li_Inner {
+   display: flex;
+   margin-bottom: 7px;
+   margin-top: 10px;
+}
+
