@@ -1,6 +1,6 @@
 import '../App.css';
 import React, { useEffect, useState } from 'react';
-import MyButton from '../ui/MyButton.tsx';
+import MyButton from '../ui/MyButton/MyButton.tsx';
 import FigureList from '../components/FigureList';
 
 

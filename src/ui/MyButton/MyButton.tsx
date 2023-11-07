@@ -1,11 +1,9 @@
-import React, { ReactNode, useEffect, useRef } from "react";
+import React, { ReactNode } from "react";
 
 interface MyButtonProps {
    children: ReactNode,
    onClick: () => void,
 }
-
-
 
 const MyButton = ({children, onClick,  ...props}: MyButtonProps) => {
 

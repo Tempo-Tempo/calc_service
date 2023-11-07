@@ -1,7 +1,6 @@
 export const RulesTypeTriangle = ({a, b, c}) => {
    let resultText = '';
    let errorInput = '';
-   console.log(c)
   if(c === undefined || c === '') return;
    switch(true) {
       case (Number(a) + Number(b)) <= Number(c) || (Number(a) + Number(c)) <= Number(b) || (Number(b) + Number(c)) <= Number(a):

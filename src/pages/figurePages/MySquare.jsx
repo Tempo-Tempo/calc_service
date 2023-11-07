@@ -1,8 +1,8 @@
-import React, { useCallback, useEffect, useRef, useState } from 'react';
-import MyInput from '../../ui/MyInputForCalc.tsx';
-import MyButton from '../../ui/MyButton.tsx';
-import MyImage from '../../ui/MyImage';
-import LinkToMain from '../../ui/LinkToMain';
+import React, { useCallback, useEffect, useState } from 'react';
+import MyInput from '../../ui/MyInputForCalc/MyInputForCalc.tsx';
+import MyButton from '../../ui/MyButton/MyButton.tsx';
+import MyImage from '../../ui/MyImage/MyImage.jsx';
+import LinkToMain from '../../ui/MyLinkToMain/LinkToMain.jsx';
 import { ErrorMessage } from '../../components/ErrorMessage';
 import { calc } from '../../hooks/UseTestPost/GetCalcResult.js';
 

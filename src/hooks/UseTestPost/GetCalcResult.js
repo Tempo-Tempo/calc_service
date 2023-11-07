@@ -14,7 +14,7 @@ export async function calc(values, fetchPath) {
       if(Number(responce.data) === 0) return "Результат не может быть = 0";
     return Number(responce.data).toFixed(2);
    }).catch(error => {
-      console.log(error);
+      return;
    });
    return result;
 }
