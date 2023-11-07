@@ -11,7 +11,7 @@ const FigureList = ({ ListIsOpen }) => {
    useEffect(() => {
       return async () => {
          const responce = await UseGetFigure();
-         setFigureList(responce.map((figure) => {
+         setFigureList(responce?.map((figure) => {
             figure.path = HelperFigurePath(figure);
             return figure;
          }));
