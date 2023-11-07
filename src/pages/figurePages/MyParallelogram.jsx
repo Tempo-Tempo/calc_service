@@ -76,7 +76,7 @@ const MyParallelogram = () => {
                Результат: <span className='text-green-500'>{result}</span> 
             </li>}
          </ul>
-         <MyButton onClick={calcMyParallelogram} >Рассчитать</MyButton>
+         <MyButton id='1' onClick={calcMyParallelogram} >Рассчитать</MyButton>
       </div>
    );
 };

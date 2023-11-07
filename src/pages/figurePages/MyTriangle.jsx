@@ -35,8 +35,6 @@ const MyTriangle = () => {
      handlerPutOption('triangle/square');
    }, []);
 
-   
-
    const otherResults = async () => {
       let wrongRule = RulesTypeTriangle(newCalc)
       let finalResult = await calc(newCalc, typeFigure);
@@ -85,7 +83,9 @@ const MyTriangle = () => {
                value={newCalc.a} 
                onChange={(e) => setNewCalc({...newCalc, a: e})} 
                placeholder='Введите основание a' 
-               validison={ ErrorMessage(newCalc.a, startValid)} />
+               validison={ ErrorMessage(newCalc.a, startValid)}
+               calcMySquare={calcMyTriangle}
+               />
                <MyInput 
                value={newCalc.b} 
                onChange={(e) => setNewCalc({...newCalc, b: e})} 
@@ -224,7 +224,7 @@ const MyTriangle = () => {
                  Результат: <span className='text-green-500'>{errorTriangle ? errorTriangle.resultText : result}</span>  
             </li>}
          </ul>
-         <MyButton onSubmit={calcMyTriangle} onClick={calcMyTriangle}>Рассчитать</MyButton>
+         <MyButton onClick={calcMyTriangle}>Рассчитать</MyButton>
       </div>
    );
 };

@@ -15,6 +15,7 @@ function MainPage() {
     setListIsOpen(prev => !prev);
   }
 
+
   useEffect(() => {
     localStorage.setItem('isOpen', JSON.stringify(ListIsOpen));
   }, [ListIsOpen])
