@@ -1,0 +1,23 @@
+.figure_list {
+   position: relative;
+   background: #000;
+   border-radius: 5px;
+   margin-top: 10px;
+   width: 13rem;
+}
+
+.figure_list_item{
+   font-size: bold;
+   cursor: pointer;
+   padding: 7px;
+   border-radius: 5px;
+   font-weight: bold;
+   font-size: 1rem; 
+   line-height: 1.5rem;
+   border: solid 1px skyblue;
+   color: white;
+}
+
+.figure_list_item:hover {
+   background: rgba(128, 128, 128, 0.564);
+}

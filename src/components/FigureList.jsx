@@ -18,7 +18,7 @@ const FigureList = ({ ListIsOpen }) => {
       }
    }, [])
    return (
-      <ul className='bg-black rounded-md mt-2 relative w-48'>
+      <ul className='figure_list'>
          { ListIsOpen && FigureList?.map(figure => <Link key={ figure?.id } to={figure?.path}> <FigureListItem figure={ figure } /></Link>)}
       </ul>
    );
