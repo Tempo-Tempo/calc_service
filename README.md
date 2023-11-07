@@ -14,7 +14,7 @@ Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 The page will reload when you make changes.\
 You may also see any lint errors in the console.
 
-### `npm run server` // Для работы пет-проекта необходимо запустить json-server!!!
+### `npm run server` // Для работы приложения необходимо запустить json-server, а так же скачать и запустить backend составляющую https://github.com/Tempo-Tempo/calc_test 
 
 ### `npm run build`
 
