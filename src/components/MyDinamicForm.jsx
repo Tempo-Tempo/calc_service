@@ -25,13 +25,15 @@ const MyDinamicForm = ( { typeFigure, } ) => {
   
    useEffect(() => {
       setNewCalc({a: '', b: '', c: '', d: ''});
+      setErrorTrapezoid('');
+      setErrorTriangle('');
       setResult('');
    }, [typeFigure]);
 
    const otherResults = async () => {
       let wrongRule = RulesTypeTriangle(newCalc)
       let finalResult = await calc(newCalc, typeFigure);
-      setErrorTriangle(wrongRule)
+      setErrorTriangle(wrongRule);
       setResult(finalResult);
    }
 
