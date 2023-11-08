@@ -8,7 +8,7 @@ In the project directory, you can run:
 
 ### `npm start` //Некоторые стили умышленно были написано в стили inline(с помощью tailwind) - это плохая практика, но здесь важна была не стилизация.
 
-Runs the app in the development mode.\
+Скрипт по умолчанию включает 3000 порт, если его сменить то связи с backend'ом не будет.
 Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
 ### `npm run server` // Для работы приложения необходимо запустить json-server, а так же скачать и запустить backend составляющую https://github.com/Tempo-Tempo/calc_test 
