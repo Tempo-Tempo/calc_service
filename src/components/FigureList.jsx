@@ -7,7 +7,7 @@ import { Link } from 'react-router-dom';
 const FigureList = ({ ListIsOpen }) => {
 
    const [FigureList, setFigureList] = useState([]);
-  
+
    useEffect(() => {
       return async () => {
          const responce = await UseGetFigure();
@@ -17,6 +17,8 @@ const FigureList = ({ ListIsOpen }) => {
          }));
       }
    }, [])
+
+
    return (
       <ul className='figure_list'>
          { ListIsOpen && FigureList?.map(figure => <Link key={ figure?.id } to={figure?.path}> <FigureListItem figure={ figure } /></Link>)}

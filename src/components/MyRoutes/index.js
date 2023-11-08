@@ -9,8 +9,6 @@ import MyTrapezoid from "../../pages/figurePages/MyTrapezoid";
 import MyRecTriangle from "../../pages/figurePages/MyRecTriangle";
 
 
-
-
 export const ArrRoutes = [
    { path: "/", component: MainPage, exact: true },
    { path: "/square", component: MySquare, exact: true },
